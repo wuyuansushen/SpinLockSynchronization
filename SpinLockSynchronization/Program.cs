@@ -15,6 +15,8 @@ namespace SpinLockSynchronization
         }
 
         const int N = 100000;
+
+        //Use System.Collections.Concurrent.ConcurrentQueue<T> class can avoid the user lock.
         static Queue<Data> _queue = new Queue<Data>();
 
         public delegate void lockProfiling(Data dataUnit, int i);
